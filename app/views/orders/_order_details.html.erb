@@ -9,8 +9,6 @@
     </thead>
     <tbody>
       <% @order.line_items.each do |line_item| %>
-        <%# <%= debug line_item %>
-        <%# <%= debug line_item[:product] %>
         <%= render 'item', line_item: line_item %>
       <% end %>
     </tbody>

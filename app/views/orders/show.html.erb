@@ -5,6 +5,7 @@
   </header>
 
   <h4>Thank you for your order!</h4>
+  <h4>email: <%= @order.email %></h4>
   <%= render 'order_details' %>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
