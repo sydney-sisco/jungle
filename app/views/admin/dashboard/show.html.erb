@@ -6,7 +6,7 @@
 
   <div class="panel panel-default dashboard">
       <h3>Products: <%= @product_count %> <%= link_to "Go to Products", admin_products_path, class: 'btn btn-lg btn-primary' %></h3>
-      <h3>Categories: <%= @category_count %> <%= link_to "Go to Categories", root_path, class: 'btn btn-lg btn-primary disabled', :disabled => true %></h3>
+      <h3>Categories: <%= @category_count %> <%= link_to "Go to Categories", admin_categories_path, class: 'btn btn-lg btn-primary' %></h3>
   </div>
 
 </section>
