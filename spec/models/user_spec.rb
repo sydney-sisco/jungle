@@ -19,7 +19,6 @@ RSpec.describe User, type: :model do
       user = User.create(
         :first_name => 'Dude',
         :last_name => 'McTester',
-        # :email => 'dude@tester.com',
         :password => '123123123',
         :password_confirmation => '123123123'
       )
@@ -30,7 +29,6 @@ RSpec.describe User, type: :model do
     
     it 'should validate presence of first name' do
       user = User.create(
-        # :first_name => 'Dude',
         :last_name => 'McTester',
         :email => 'dude@tester.com',
         :password => '123123123',
@@ -44,7 +42,6 @@ RSpec.describe User, type: :model do
     it 'should validate presence of last name' do
       user = User.create(
         :first_name => 'Dude',
-        # :last_name => 'McTester',
         :email => 'dude@tester.com',
         :password => '123123123',
         :password_confirmation => '123123123'
@@ -59,7 +56,6 @@ RSpec.describe User, type: :model do
         :first_name => 'Dude',
         :last_name => 'McTester',
         :email => 'dude@tester.com',
-        # :password => '123123123',
         :password_confirmation => '123123123'
       )
   
@@ -73,11 +69,10 @@ RSpec.describe User, type: :model do
         :last_name => 'McTester',
         :email => 'dude@tester.com',
         :password => '123123123',
-        # :password_confirmation => '123123123'
       )
   
       expect(user).to_not be_valid
-      # expect(user.errors.full_messages).to include 'Password can\'t be blank'
+      expect(user.errors.full_messages).to include 'Password confirmation can\'t be blank'
     end
 
     it 'should validate password and password_confirmation match' do
