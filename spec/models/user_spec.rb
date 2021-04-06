@@ -120,7 +120,7 @@ RSpec.describe User, type: :model do
       @user = User.create(
         :first_name => 'Dude',
         :last_name => 'McTester',
-        :email => 'dude@login-tester.com',
+        :email => 'dUde@login-tester.com',
         :password => '1234567890',
         :password_confirmation => '1234567890'
       )
@@ -137,6 +137,18 @@ RSpec.describe User, type: :model do
       user = User.authenticate_with_credentials('dude@login-tester.com', '')
   
       expect(user).to be nil
+    end
+
+    it 'should ignore white space in email address' do
+      user = User.authenticate_with_credentials('   dude@login-tester.com   ', '1234567890')
+  
+      expect(user).to eq(@user)
+    end
+
+    it 'should ignore case in email address' do
+      user = User.authenticate_with_credentials('DuDe@login-tEstEr.COM', '1234567890')
+  
+      expect(user).to eq(@user)
     end
   end
 end
