@@ -2,6 +2,14 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+Product listing page, showing Sold Out badge
+![Home page screenshot](https://github.com/sydney-sisco/jungle/blob/master/docs/homepage.png?raw=true)
+
+Cart page
+![cart page screenshot](https://github.com/sydney-sisco/jungle/blob/master/docs/cart.png?raw=true)
+
+Admin products page allowing an admin to edit products
+![admin page screenshot](https://github.com/sydney-sisco/jungle/blob/master/docs/admin.png?raw=true)
 
 ## Setup
 
